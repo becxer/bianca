@@ -1,5 +1,5 @@
 # BMCAR-Arduino
 
-![Alt BMCAR](https://raw.githubusercontent.com/becxer/BMCAR-Android/master/image/BMCAR.png)
+![Alt BMCAR](https://raw.githubusercontent.com/becxer/BMCAR-Arduino/master/image/BMCAR.jpg)
 
 B's Motorcar (BMCAR) Arduino
