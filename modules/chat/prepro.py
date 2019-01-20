@@ -1,5 +1,6 @@
 import spacy
 import random
+from tqdm import tqdm
 from collections import Counter
 
 nlp = spacy.blank("en")
@@ -14,7 +15,7 @@ def process_file(filename, word_counter, char_counter):
     total = 0
     with open(filename, "r") as fp:
         conversations = fp.read().split("\n\n")
-        for conversation in conversations :
+        for conversation in tqdm(conversations) :
             conv = conversation.split("\n")
             prev_sent = None
             for sent in conv:
@@ -35,7 +36,9 @@ def process_file(filename, word_counter, char_counter):
     random.shuffle(examples)
     return examples
 
-test_sent = word_tokenize("hello I am a boy")
+test_sent = "hello I am a boy"
+tokenized_test_sent = word_tokenize(test_sent)
+print(test_sent, "->", tokenized_test_sent)
 word_counter, char_counter = Counter(), Counter()
 examples = process_file("/Users/mac/project/bianca/data/chitchat/chitchat.txt", word_counter, char_counter)
-
+print(examples[0])
