@@ -40,5 +40,10 @@ test_sent = "hello I am a boy"
 tokenized_test_sent = word_tokenize(test_sent)
 print(test_sent, "->", tokenized_test_sent)
 word_counter, char_counter = Counter(), Counter()
-examples = process_file("/Users/mac/project/bianca/data/chitchat/chitchat.txt", word_counter, char_counter)
+examples = process_file("../../data/eslfast/chitchat.txt", word_counter, char_counter)
 print(examples[0])
+
+print(word_counter)
+print(char_counter)
+
+
